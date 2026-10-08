@@ -2,6 +2,6 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/resume-match-ai/',
-  plugins: [react()],
+	base: process.env.GITHUB_ACTIONS ? '/resume-match-ai/' : '/',
+	plugins: [react()],
 })
